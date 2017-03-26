@@ -9,20 +9,9 @@ public class Jar {
   Scanner scanner = new Scanner(System.in);
   Random random = new Random();
   
-  public String promptForItem() {
-    System.out.println("ADMINISTRATOR INPUT:");
-    System.out.print("What type of item is in the jar? ");
-    String itemInput = scanner.nextLine();
-    itemName = itemInput;
-    return itemName;
-  }
-  
-  public int totalPossibleItems() {
-    System.out.printf("What is the maximum amount of %s? ",
-                     itemName);
-    int total = scanner.nextInt();
-    maximumNumber = total;
-    return maximumNumber;
+  public Jar(String itemName, int maximumNumber) {
+    this.itemName = itemName;
+    this.maximumNumber = maximumNumber;
   }
   
   public int actualNumber() {
@@ -41,8 +30,7 @@ public class Jar {
       attempts++;
     }
     attempts++;
-    System.out.printf("You got it in %d attempt(s).%n",
-                      attempts);
-    
+    System.out.printf("You got it in %d attempts.%n",
+                      attempts); 
   }
 }
