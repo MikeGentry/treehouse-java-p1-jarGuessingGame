@@ -12,6 +12,8 @@ public class Jar {
   public Jar(String itemName, int maximumNumber) {
     this.itemName = itemName;
     this.maximumNumber = maximumNumber;
+    actualNumber();
+    promptForGuess(); 
   }
   
   public int actualNumber() {

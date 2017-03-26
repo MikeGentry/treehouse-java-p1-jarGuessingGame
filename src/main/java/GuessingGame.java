@@ -12,7 +12,5 @@ public class GuessingGame {
       int maximumNumber = scanner.nextInt();
       
       Jar jar = new Jar(itemName, maximumNumber);
-      jar.actualNumber();
-      jar.promptForGuess();
     }
 }
